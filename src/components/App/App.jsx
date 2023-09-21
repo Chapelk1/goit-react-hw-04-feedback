@@ -11,9 +11,7 @@ export function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const options = {good, neutral, bad}
-
-const stateValueHandler = e => {
+  const stateValueHandler = e => {
   const { textContent } = e.currentTarget;
   
   switch (textContent) {
@@ -50,7 +48,7 @@ const stateValueHandler = e => {
     <>
       <Section title="Please leave feedback">
         <FeedbackOptions
-          options={options}
+          options={['good', 'neutral', 'bad']}
           onLeaveFeedback={stateValueHandler}
         />
       </Section>
